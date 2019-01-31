@@ -1,0 +1,87 @@
+//MODULE ASSIGNMENT 2 - LEVEL 1
+
+1. 
+
+1. What is a function literal?
+
+	A function literal is an expresseion that defines an unamed function.
+
+	since a function realy is a object in javascript it can be stored as a variable like this.
+
+	var test = function (a, b) {
+	return a * b;
+	};
+
+	"test" can be used unside an other function like this:
+
+	function newfunc(){
+	
+		var result;
+		result = test(40,60);
+		console.log(result);
+	
+	}
+
+
+
+
+2. What is the constructor?
+
+
+	A constructor is like recipefor how you create objects with similar features. In Javascript the constructors is mostly used as Constructor functions like this:
+	function warrior(strengh, height, gender){
+			this.strengh=strengh;
+			this.height = height;
+			this.gender = gender;
+	}
+	This keyword means in a way the object that "owns" the code, and it will become the new Object when creating the new Object:
+	var Viking = new Viking(100,100,"female");
+
+
+
+
+
+3. What does the return statement do?
+
+
+	The return statment will stop the functions execution and return a value back.
+		like this:
+
+		function test(){
+			return 5;
+		}
+
+	Will return 5 from that function.
+
+
+
+
+4. What will be written to the console from this function:
+
+		
+function myFunction(){
+			  
+return console.log('inside my function');
+  //inside my function will be written to the console		  
+console.log('My name is Andy');
+		   //My name is Andy will be undefined since the function returned before this part was exxecuted.
+}
+		
+myFunction();
+
+
+
+
+
+
+
+5. Briefly describe scope in JavaScript.
+
+  
+	There are different types of scope in java. Global Scope and function scope. 
+	Global scope is the place if you create variables outside any functions or prior to any JavaScript. 
+	The Global variable can be accessed by all the functions that you create in the global scope.
+	The functional scope on the other hand is variables that you create inside a function and those can only be accessed inside that function and not from other function or outside the function.
+	One little thing that is important to remember when writing variables in a function is to specify the variable with "var". 
+	If not, the interpreter/or browser will put the variable in the global scope, and it can be accessed by "everybody". 
+	This can in turn mess up the code.  Another way is to use the "use strict"; mode.  If you don’t declare a variable inside a function with the "use strict" mode. The Compiler will trow an error.
